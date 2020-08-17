@@ -1,0 +1,8 @@
+@media (min-width: 1200px){
+ .container {
+    max-width: 1450px;
+}
+}
+.border-success .border {
+    border-color: grey; 
+}

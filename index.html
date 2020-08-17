@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Display Table </title>
+        <meta charset="windows-1252">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+      <!-- Include Bootstrap for styling -->
+<link rel="stylesheet" href= "https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" 
+integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> 
+<link rel="stylesheet" href="styles.css">
+
+    </head>
+    <body>
+        <div class="container"> 
+            <h1 class="text text-success text-center "> 
+                Performance of Reproductive Child Health 
+            </h1> 
+            <h3 class="text text-success text-center"> 
+              April 2018 - September 2018
+            </h3>
+        
+        <table id="table" border="1" class="table-striped border ">
+            <tr>
+                <th>Indicators S.No</th>
+                <th>Indicator Group</th>
+                <th > Item Code (As per HMIS formats)</th>
+                <th> Indicators Item</th>
+                <th onclick="Cell('Need')"> Need Assessed (2018-19) - Nos. - (A)</th>
+                <th>Need Assessed (2018-19) - Units - (B)</th>
+                <th> Achievement during April to September - India - (2018-19) - (C)</th>
+                <th>Achievement during April to September - State: Uttar Pradesh - (2018-19) - (D)</th>
+                <th>  Achievement during April to September - State: Uttar Pradesh - (2017-18) - (E)</th>
+                <th> Achievement during April to September 
+                    - State: Uttar Pradesh - % Change - (F=((D-E)/E)*100)</th>
+                 <th> % Achievement of need assessed (2018-19) - (G=(D/A)*100)</th> 
+            </tr>
+        </div>            
+ </table>
+
+        <!--js file-->
+<script src="short.js"></script> 
+
+        <script id="datasort" type="text/javascript">
+            
+            var data = [
+            [
+            "A. Immunisation",
+            "A. 1",
+            "9.1.2",
+            "Bacillus Calmette Guerin (BCG)",
+            "5606880",
+            "Children upto 1 year of age",
+            "1,13,48,401",
+            "22,91,534",
+            "22,28,974",
+            "2.8",
+            "40.9"
+          ],
+          [
+            "A. Immunisation",
+            "A. 2",
+            "9.1.5,9.1.8",
+            "Penta 3 + DPT 3",
+            "5606880",
+            "Children upto 1 year of age",
+            "1,11,90,576",
+            "21,47,871",
+            "21,00,773",
+            "2.2",
+            "38.3"
+          ],
+          [
+            "A. Immunisation",
+            "A. 3",
+            "9.5.2",
+            "DT (2nd Dose)or DPT 5",
+            "5083000",
+            "Children 5 years of age",
+            "79,73,248",
+            "11,82,433",
+            "11,82,917",
+            "0",
+            "23.3"
+          ],
+          [
+            "A. Immunisation",
+            "A. 4",
+            "9.2.1,9.2.2",
+            "Measles + MR",
+            "5606880",
+            "Children upto 1 year of age",
+            "1,17,49,270",
+            "23,86,523",
+            "22,55,263",
+            "5.8",
+            "42.6"
+          ],
+          [
+            "A. Immunisation",
+            "A. 5",
+            "9.1.12",
+            "Polio (OPV3)",
+            "5606880",
+            "Children upto 1 year of age",
+            "1,10,04,517",
+            "20,92,720",
+            "20,67,892",
+            "1.2",
+            "37.3"
+          ],
+          [
+            "A. Immunisation",
+            "A. 6",
+            "9.5.3",
+            "Tetanus Toxoid (TT10)",
+            "4913000",
+            "Children aged less than 10 years of age",
+            "70,78,451",
+            "10,43,216",
+            "11,06,682",
+            "-5.7",
+            "21.2"
+          ],
+          [
+            "A. Immunisation",
+            "A. 7",
+            "9.5.4",
+            "Tetanus Toxid (TT16)",
+            "5861000",
+            "Children aged less than 16 years of age",
+            "68,74,471",
+            "11,05,318",
+            "11,99,432",
+            "-7.8",
+            "18.9"
+          ],
+          [
+            "A. Immunisation",
+            "A. 8",
+            "9.8.1",
+            "Vitamin A (1st Dose)",
+            "5606880",
+            "Children upto 1 year of age",
+            "97,00,958",
+            "20,67,673",
+            "21,45,680",
+            "-3.6",
+            "36.9"
+          ],
+          [
+            "A. Immunisation",
+            "A. 9",
+            "9.8.2",
+            "Vitamin A (5th Dose)",
+            "4735000",
+            "Children 3 year of age",
+            "78,18,285",
+            "5,38,855",
+            "18,14,770",
+            "-70.3",
+            "11.4"
+          ],
+          [
+            "A. Immunisation",
+            "A.10",
+            "9.8.3",
+            "Vitamin A (9th Dose)",
+            "5083000",
+            "Children 5 years of age",
+            "74,61,595",
+            "3,73,648",
+            "18,47,448",
+            "-79.8",
+            "7.4"
+          ],
+          [
+            "B. Maternal and Child Health",
+            "B. 1",
+            "1.1",
+            "ANC",
+            "6729430",
+            "Pregnant women",
+            "2,48,56,390",
+            "46,34,856",
+            "41,60,020",
+            "11.4",
+            "68.9"
+          ],
+          [
+            "B. Maternal and Child Health",
+            "B. 2",
+            "2.1.1.a,2.1.1.b",
+            "Maternal Health - Home Deliveries",
+            "NA",
+            "NA",
+            "6,97,108",
+            "2,80,371",
+            "2,99,043",
+            "-6.2",
+            "NA"
+          ],
+          [
+            "B. Maternal and Child Health",
+            "B. 3",
+            "2.2",
+            "Maternal Health - Institutional Deliveries",
+            "5846590",
+            "Total Births",
+            "95,30,646",
+            "15,49,307",
+            "14,22,974",
+            "8.9",
+            "26.5"
+          ],
+          [
+            "C. Family Planning",
+            "C. 1",
+            "8.13",
+            "Condom-User *",
+            "31892000",
+            "Unsterilised Eligible Couples",
+            "45,77,644",
+            "5,21,530",
+            "4,89,488",
+            "6.5",
+            "1.6"
+          ],
+          [
+            "C. Family Planning",
+            "C. 2",
+            "8.12,8.14",
+            "Oral Pill Users *",
+            "31892000",
+            "Unsterilised Eligible Couples",
+            "32,02,832",
+            "2,86,903",
+            "2,61,879",
+            "9.6",
+            "0.9"
+          ],
+          [
+            "C. Family Planning",
+            "C. 3",
+            "8.3,8.4,8.5",
+            "IUD Insertions",
+            "31892000",
+            "Unsterilised Eligible Couples",
+            "29,43,521",
+            "4,41,308",
+            "5,16,816",
+            "-14.6",
+            "1.4"
+          ],
+          [
+            "C. Family Planning",
+            "C. 4",
+            "8.2.1,8.2.2,8.2.3,8.2.4,8.1.1",
+            "Sterilisation",
+            "38601000",
+            "Total Eligible Couples",
+            "12,88,517",
+            "51,471",
+            "51,569",
+            "-0.2",
+            "0.1"
+          ],
+          [
+            "C. Family Planning",
+            "C. 5",
+            "8.2.1,8.2.2,8.2.3,8.2.4",
+            "Tubectomy",
+            "38601000",
+            "Total Eligible Couples",
+            "12,69,723",
+            "49,475",
+            "49,262",
+            "0.4",
+            "0.1"
+          ]
+        ],
+                table = document.getElementById("table");
+                for(var i = 0; i < data.length; i++)
+           {
+               // create a new row
+               var newRow = table.insertRow(table.length);
+               for(var j = 0; j < data[i].length; j++)
+               {
+                   // create a new cell
+                   var cell = newRow.insertCell(j);
+                   
+                   // add value to the cell
+                   cell.innerHTML = data[i][j];
+               }
+           }
+        </script>
+        
+    </body>
+</html>
